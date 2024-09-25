@@ -1,4 +1,4 @@
-# Project JA 3
+# [Project JA 3](https://github.com/lxRbckl/Project-JA/wiki/V3)
 > Interact with the mystical conch shell, engage in weekly conversation prompts, and delegate decision-making. V3. Fall 2023.
 
 ---
