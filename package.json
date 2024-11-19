@@ -1,7 +1,7 @@
 {
   "name": "project-ja",
   "version": "1.0.0",
-  "description": "> ... Fall 2023.",
+  "description": "> Interact with the mystical conch shell, engage in weekly conversation prompts, and delegate decision-making. V3. Fall 2023.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.14.1",
-    "lxrbckl": "^5.0.5",
-    "node-cron": "^3.0.3",
-    "openai": "^4.20.1"
+    "lxrbckl": "^9.9.0",
+    "node-cron": "^3.0.3"
   }
 }
