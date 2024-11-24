@@ -2,13 +2,13 @@ var configOpenai: {
 
    token: string,
    query: string,
-   status: 'on' | 'off'
+   status: string
 
 } = {
 
    token : '',
-   status : 'off',
-   query : 'ask me an interesting question'
+   status : 'on',
+   query : 'ask me an interesting question; only return the question; make the question strange'
 
 }
 

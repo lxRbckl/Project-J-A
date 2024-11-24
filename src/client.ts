@@ -27,7 +27,7 @@ export default class Client {
             'discussion' : new discussion()
 
          },
-         
+
          guildId : config.guildId,
          channelId : config.channelId,
          applicationId : config.applicationId
@@ -48,35 +48,59 @@ export default class Client {
    }
 
 
-   private async _listen() {
+   private async _listen(): Promise<void> {
 
       this._discord.registerInteractionCreate(async (interaction) => {
 
-         await interaction.reply({
+         // try (send message from command) <
+         // except (then no message) <
+         try {
 
-            ephemeral : true,
-            content : await this._discord.commands[interaction.commandName].run({
+            await interaction.reply({
 
-               // insert args //
+               ephemeral : true,
+               content : await this._discord.commands[interaction.commandName].run({
 
-            })
+                  // (conch, choose, discussion) <
+                  conch : interaction.options.get('conch')?.value,
 
-         });
+                  choose : interaction.options.get('choose')?.value,
+
+                  isDiscrete : true,
+                  query : interaction.options.get('query')?.value,
+                  status : interaction.options.get('status')?.value
+
+                  // >
+
+               })
+
+            });
+
+         } catch (error) {}
+
+         // >
 
       });
 
    }
 
 
-   private async _schedule() {
+   private async _schedule(): Promise<void> {
 
       this._discord.registerOnReady(async () => {
 
-         cron.schedule('0 0 * * 1', async () => {
+         this._discord.messageChannel({
 
-
+            isInline : true,
+            content : await this._discord.commands['discussion'].run({})
 
          });
+
+         // cron.schedule('0 0 * * 1', async () => {
+
+
+            
+         // });
 
       });
 
