@@ -4,7 +4,7 @@ import { discord } from 'lxrbckl';
 
 import conch from './commands/conch';
 import choose from './commands/choose';
-import config from './config/configClient';
+import config from './configs/confClient';
 import discussion from './commands/discussion';
 
 // >
@@ -89,18 +89,16 @@ export default class Client {
 
       this._discord.registerOnReady(async () => {
 
-         this._discord.messageChannel({
+         cron.schedule('0 0 * * 1', async () => {
 
-            isInline : true,
-            content : await this._discord.commands['discussion'].run({})
+            this._discord.messageChannel({
+
+               isInline : true,
+               content : await this._discord.commands['discussion'].run({})
+   
+            });
 
          });
-
-         // cron.schedule('0 0 * * 1', async () => {
-
-
-            
-         // });
 
       });
 

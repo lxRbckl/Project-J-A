@@ -6,9 +6,9 @@ var configOpenai: {
 
 } = {
 
-   token : '',
-   status : 'on',
-   query : 'ask me an interesting question; only return the question; make the question strange'
+   token : process.env.TokenOpenAi!,
+   status : process.env.Status!,
+   query : process.env.Query!
 
 }
 

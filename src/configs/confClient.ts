@@ -7,10 +7,10 @@ const configClient: {
 
 } = {
 
-   token : '',
-   guildId : '768020237139705857',
-   channelId : '1277773636375154820',
-   applicationId : '1210136647992344596'
+   token : process.env.TokenDiscord!,
+   guildId : process.env.GuildId!,
+   channelId : process.env.ChannelId!,
+   applicationId : process.env.ApplicationId!
 
 }
 

@@ -1,6 +1,6 @@
 // import <
 import { openai } from 'lxrbckl';
-import configs from '../config/configOpenai';
+import configs from '../configs/confOpenAi';
 import { DiscussionProps } from '../typings/tDiscussion';
 
 // >
@@ -100,7 +100,7 @@ export default class Discussion {
       if (status) {response += this._setStatus(status);}
       else {
 
-         if ((configs.status == 'on') && (!isDiscrete)) {
+         if ((configs.status == 'on') && (isDiscrete == false)) {
 
             response += await this._chatgpt.query(configs.query);
 
