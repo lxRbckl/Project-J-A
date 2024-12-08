@@ -1,5 +1,5 @@
 # [Project JA 4](https://github.com/lxRbckl/Project-JA/wiki/V4)
-> Interact with the mystical conch shell, engage in weekly conversation prompts, and delegate decision-making. V3. Fall 2023.
+> Interact with the mystical conch shell, engage in weekly conversation prompts, and delegate decision-making. V4. Fall 2024.
 
 ---
 
