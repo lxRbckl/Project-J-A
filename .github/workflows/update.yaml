@@ -14,6 +14,7 @@ jobs:
     env:
 
       project: "project-ja"
+      commitMessage: "Update"
       architecture: "linux/arm64"
 
     steps:
@@ -23,7 +24,7 @@ jobs:
 
           commitMessage="${{ github.event.head_commit.message }}";
 
-          if [ "$commitMessage" != "Update" ]; then
+          if [ "$commitMessage" != "${{ env.commitMessage }}" ]; then
 
              echo "Strictly told not to update.";
              exit 1;
