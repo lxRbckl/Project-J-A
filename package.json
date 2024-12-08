@@ -4,7 +4,7 @@
   "description": "> Interact with the mystical conch shell, engage in weekly conversation prompts, and delegate decision-making. V3. Fall 2023.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc"
   },
   "author": "",
   "license": "ISC",
